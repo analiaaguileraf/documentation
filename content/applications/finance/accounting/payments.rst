@@ -29,8 +29,8 @@ reflected in an :ref:`outstanding <bank/outstanding-accounts>` **receipts** or *
 At this point, the customer invoice or vendor bill is marked as :guilabel:`In payment`. Then, when
 the outstanding account is reconciled with a bank statement line, the invoice or vendor bill changes
 to the :guilabel:`Paid` status.
-
 The information icon near the payment line displays more information about the payment. You can
+
 access additional information, such as the related journal, by clicking :guilabel:`View`.
 
 .. image:: payments/information-icon.png
