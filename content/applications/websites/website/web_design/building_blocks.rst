@@ -55,6 +55,8 @@ dragging and dropping them.
    .. image:: building_blocks/superimpose-images-to-text.png
       :alt: Positioning an image behind text
 
+.. _building_blocks/cols:
+
 Cols
 ----
 
@@ -88,7 +90,7 @@ You can also use the drag-and-drop icon to move a block manually.
 .. image:: building_blocks/reordering-blocks.png
    :alt: Reordering building blocks
 
-.. _blocks/visibility:
+.. _building_blocks/visibility:
 
 Visibility
 ==========
