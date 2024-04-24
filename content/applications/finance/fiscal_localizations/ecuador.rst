@@ -569,6 +569,97 @@ withholdings percentages apply.
    withholding of 70% in a new line with the same tax support, the system will allow you as long as
    the total of the bases matches the total from the :guilabel:`Vendor Bill`.
 
+Point of Sale electronic invoicing
+----------------------------------
+
+:ref:`Install <general/install>` the *Ecuadorian Module for Point of Sale* (`l10n_cl_edi_pos`)
+module to enable the following features and configurations:
+
+- Choose the SRI payment method in each payment method configuration.
+- Customers can manually input their identification type and identification number when creating a
+  new contact on *POS*.
+- Automatically generate a valid electronic invoice for Ecuador at the end of the checkout process.
+
+Configuration
+~~~~~~~~~~~~~
+
+Payment method
+**************
+
+To set a payment method for a point of sale, go to :menuselection:`POS --> Configuration --> Payment
+Methods --> Set SRI Payment Method`. Set the :guilabel:`SRI Payment Method` in the payment method
+for each point of sale.
+
+QR code POS receipt
+*******************
+
+To activate the functionality of a QR code on the POS receipt, navigate to :menuselection:`POS -->
+Configuration --> Settings` to find the :guilabel:`Activate QR Code` option.
+
+Enabling this allows the client to scan the code and access the invoice from the POS order from the
+Odoo portal.
+
+.. note::
+   If the client requests a credit note due to a return of this type of purchase, the credit note
+   and return process can be managed directly from the POS session.
+
+Invoicing flows
+~~~~~~~~~~~~~~~
+
+Type and identification number
+******************************
+
+The POS cashier will be able to create a new contact for a customer who requests an invoice from the
+sale. For this process, two new fields have been added to the contact creation form. Type of
+identification and identification number.
+
+.. note::
+   A verification exists to verify that the identification number filled has the correct length. For
+   RUC identification, 13 digits are required. For Cédula, 9 digits are required. When the
+   configurations are all set, this feature will cover the next invoicing flows.
+
+Electronic invoice: anonymous end consumer
+******************************************
+
+When clients do not request an electronic invoice for their purchase, Odoo automatically selects the
+contact for the order as the *Consumidor Final* and generates an electronic invoice.
+
+.. note::
+   If the client requests a credit note due to a return of this type of purchase, the credit note
+   should be made using the client's real contact information. Credit notes cannot be created to
+   *Consumidor Final*, and can be managed directly from the POS session.
+
+Electronic invoice: specific customer
+*************************************
+
+If a customer requests an invoice during the sales, it is possible to select or create the required
+contact with their fiscal information so the invoice can be created with the desired customer
+information.
+
+.. note::
+   If the client requests a credit note due to a return of this type of purchase, the credit note
+   and return process can be managed directly from the POS session.
+
+Returns
+*******
+
+For electronic invoices, it is possible to manage the process to return products sold in a *Point of
+Sale* order, by selecting the :guilabel:`Refund` button.
+
+.. image:: ecuador/pos-refund-order.png
+   :align: center
+   :alt: Refund option in the POS application.
+
+Orders can be searched by status of the order or by contact and selected for the refund to be based
+on the client's original order.
+
+.. image:: ecuador/pos-select-order-refund.png
+   :align: center
+   :alt: Selection of order for the refund process.
+
+When the return payment is validated, Odoo generates the necessary credit note, referencing the
+original receipt or invoice, partially or fully canceling the document.
+
 Financial Reports
 =================
 
