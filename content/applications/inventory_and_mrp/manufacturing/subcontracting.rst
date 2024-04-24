@@ -1,6 +1,18 @@
+<<<<<<< HEAD:content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
 ==============================
 Subcontract your Manufacturing
 ==============================
+||||||| parent of 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
+=======================
+Subcontracting overview
+=======================
+=======
+:show-content:
+
+==============
+Subcontracting
+==============
+>>>>>>> 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/subcontracting.rst
 
 Outsourcing a portion or all of your company’s manufacturing needs
 is not easy. To make it work correctly, you have to:
@@ -18,6 +30,24 @@ produced out of raw materials “A” and “B”.
     :alt:
 
 With its MRP subcontracting feature, Odoo helps you handle this flow easily.
+
+.. cards::
+
+   .. card:: Basic subcontracting
+      :target: subcontracting/subcontracting_basic
+
+      Subcontract products without supplying the subcontractor with components.
+
+   .. card:: Resupply subcontractor
+      :target: subcontracting/subcontracting_resupply
+
+      Ship components to a subcontractor each time a PO for a subcontracted product is confirmed.
+
+   .. card:: Dropship to subcontractor
+      :target: subcontracting/subcontracting_dropship
+
+      Dropship components to a subcontractor each time a PO for a subcontracted product is
+      confirmed.
 
 Configuration
 =============
@@ -48,10 +78,31 @@ several subcontractors.
 Basic Subcontracting Flow
 =========================
 
+<<<<<<< HEAD:content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
 To let your subcontractor know how many products you need, create and
 send them purchase orders (PO). To do so, go to the *Purchase* app and
 create a new purchase order. Be sure to send the PO to a vendor that is
 defined as a subcontractor on the *BoM* of these products.
+||||||| parent of 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
+- In the *basic* subcontracting workflow, the subcontractor is fully responsible for obtaining the
+  components. This workflow is outlined in the :doc:`subcontracting_basic` documentation.
+- In the *Resupply Subcontractor on Order* workflow, the contracting company sends the components
+  from their warehouse to the subcontractor. This workflow is outlined in the
+  :doc:`subcontracting_resupply` documentation.
+- In the *Dropship Subcontractor on Order* workflow, the contracting company purchases the
+  components from a vendor, and has them delivered directly to the subcontractor. This workflow is
+  outlined in the :doc:`subcontracting_dropship` documentation.
+=======
+- In the *basic* subcontracting workflow, the subcontractor is fully responsible for obtaining the
+  components. This workflow is outlined in the :doc:`subcontracting/subcontracting_basic`
+  documentation.
+- In the *Resupply Subcontractor on Order* workflow, the contracting company sends the components
+  from their warehouse to the subcontractor. This workflow is outlined in the
+  :doc:`subcontracting/subcontracting_resupply` documentation.
+- In the *Dropship Subcontractor on Order* workflow, the contracting company purchases the
+  components from a vendor, and has them delivered directly to the subcontractor. This workflow is
+  outlined in the :doc:`subcontracting/subcontracting_dropship` documentation.
+>>>>>>> 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/subcontracting.rst
 
 .. image:: subcontracting/subcontracting_04.png
     :align: center
@@ -80,6 +131,7 @@ Inventory Valuation
 
 The cost of the manufactured product “C” is defined as:
 
+<<<<<<< HEAD:content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
 **C = A + B + s**
 
 With:
@@ -212,3 +264,19 @@ by creating a dropship type PO, with your subcontractor set as the delivery addr
 
 .. image:: subcontracting/sbc_10.png
     :align: center
+||||||| parent of 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/workflows/subcontracting.rst
+It is important to note that not every subcontracted product valuation will include all of these
+variables. For example, if the product is not dropshipped to the end customer, then there is no need
+to factor in the cost of dropshipping.
+=======
+It is important to note that not every subcontracted product valuation will include all of these
+variables. For example, if the product is not dropshipped to the end customer, then there is no need
+to factor in the cost of dropshipping.
+
+.. toctree::
+   :titlesonly:
+
+   subcontracting/subcontracting_basic
+   subcontracting/subcontracting_resupply
+   subcontracting/subcontracting_dropship
+>>>>>>> 6cf05490a (temp):content/applications/inventory_and_mrp/manufacturing/subcontracting.rst
